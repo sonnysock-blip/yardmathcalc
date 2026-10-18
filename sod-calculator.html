@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sod Calculator: Square Feet, Pieces and Pallets</title><meta name="description" content="Free sod calculator. Enter your lawn size to see how many square feet, sod pieces and pallets to order, with extra for cuts."><link rel="canonical" href="https://yardmathcalc.com/sod-calculator">
+<meta property="og:title" content="Sod Calculator: Square Feet, Pieces and Pallets"><meta property="og:description" content="Free sod calculator. Enter your lawn size to see how many square feet, sod pieces and pallets to order, with extra for cuts."><meta property="og:url" content="https://yardmathcalc.com/sod-calculator"><meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap"><link rel="stylesheet" href="/style.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much sod is on a pallet?", "acceptedAnswer": {"@type": "Answer", "text": "Usually 400 to 500 square feet, often around 450. It depends on the farm."}}, {"@type": "Question", "name": "How much extra sod should I order?", "acceptedAnswer": {"@type": "Answer", "text": "5% for simple shapes, 10\u201315% for curved beds and many obstacles."}}, {"@type": "Question", "name": "How fast do I need to lay sod?", "acceptedAnswer": {"@type": "Answer", "text": "Within a day of delivery in warm weather. Sod left rolled in the heat starts to yellow quickly."}}, {"@type": "Question", "name": "Do I need topsoil under sod?", "acceptedAnswer": {"@type": "Answer", "text": "Sod roots best in 4\u20136 inches of loose topsoil. Use the topsoil calculator to size that layer."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Sod Calculator", "url": "https://yardmathcalc.com/sod-calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head><body>
+<header class="top"><div class="wrap"><a class="brand" href="/"><i></i>Yard Math</a><nav class="tools" aria-label="Sections"><a href="/mulch-and-soil">Mulch &amp; soil</a><a href="/stone-and-hardscape">Stone &amp; hardscape</a><a href="/concrete">Concrete</a><a href="/lawn-and-garden" aria-current=page>Lawn &amp; garden</a><a href="/guides">Guides</a></nav></div></header>
+<main><div class="wrap">
+  <div><p class="crumbs"><a href="/">Yard Math</a> / <a href="/lawn-and-garden">Lawn &amp; garden</a></p>
+  <h1>Sod calculator</h1><p class="lede">Measure the lawn, add a little extra for trimming around edges, and see how many pieces and pallets to order.</p></div>
+  
+  <section class="calc" data-kind="sod" data-area="1" aria-label="Sod Calculator">
+    <div class="inputs"><div class="seg" role="radiogroup" aria-label="Area shape">
+        <input type="radio" id="sod-s1" name="sod-shape" value="rect" checked><label for="sod-s1">Rectangle</label>
+        <input type="radio" id="sod-s2" name="sod-shape" value="circle"><label for="sod-s2">Circle</label>
+        <input type="radio" id="sod-s3" name="sod-shape" value="area"><label for="sod-s3">I know the area</label></div>
+      <div class="row" data-shape="rect"><div class="field"><label for="sod-len">Length</label><div class="unit"><input id="sod-len" data-f="len" type="number" inputmode="decimal" min="0" step="any" value="40"><span>ft</span></div></div><div class="field"><label for="sod-wid">Width</label><div class="unit"><input id="sod-wid" data-f="wid" type="number" inputmode="decimal" min="0" step="any" value="25"><span>ft</span></div></div></div>
+      <div class="row" data-shape="circle" hidden><div class="field"><label for="sod-dia">Diameter</label><div class="unit"><input id="sod-dia" data-f="dia" type="number" inputmode="decimal" min="0" step="any" value="10"><span>ft</span></div></div></div>
+      <div class="row" data-shape="area" hidden><div class="field"><label for="sod-sqft">Total area</label><div class="unit"><input id="sod-sqft" data-f="sqft" type="number" inputmode="decimal" min="0" step="any" value="200"><span>sq ft</span></div><span class="hint">Add up several areas and enter the total</span></div></div><div class="row"><div class="field"><label for="sod-waste">Extra for waste</label><div class="unit"><input id="sod-waste" data-f="waste" type="number" inputmode="decimal" min="0" step="any" value="5"><span>%</span></div></div></div><div class="row"><div class="field"><label for="sod-price">Price per sq ft <span class="hint">(optional)</span></label><div class="unit"><span class="pre">$</span><input id="sod-price" data-f="price" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00"></div></div></div></div>
+    <div class="result" aria-live="polite">
+      <div class="tape" aria-hidden="true"></div>
+      <div class="body">
+        <span class="eyebrow">You need</span>
+        <div class="big"><b data-o="big">0</b><span data-o="unit"></span></div>
+        <dl class="lines" data-o="lines"></dl>
+        <p class="callout" data-o="note" hidden></p>
+        <p class="note">Estimates round up. Check product labels and supplier figures before ordering.</p>
+      </div>
+    </div>
+  </section>
+  <section class="prose"><h2>Sod sizes at a glance</h2>
+    <div class="tbl"><table><thead><tr><th>Unit</th><th>Size</th><th>Covers</th></tr></thead><tbody><tr><td>Standard piece</td><td class=num>16 × 24 in</td><td class=num>2.67 sq ft</td></tr><tr><td>Pallet (typical)</td><td class=num>about 170 pieces</td><td class=num>400–500 sq ft</td></tr><tr><td>Large roll</td><td class=num>2 × 50 ft</td><td class=num>100 sq ft</td></tr></tbody></table></div></section>
+  <section class="prose"><h2>How it's calculated</h2><p>Sod is sold by the square foot, by the piece or by the pallet. The calculator adds your extra percentage, then divides by a standard 16 × 24 inch piece (about 2.67 sq ft) and a 450 sq ft pallet.</p>
+<p>Pallet sizes vary by farm, usually from 400 to 500 square feet, so check with your supplier before ordering.</p>
+<p>Curved beds and lots of edges waste more sod. Use 5% for simple rectangles and 10% or more for curvy yards.</p></section>
+  <section class="prose supplies"><h2>What you'll need</h2><ul><li>Lawn roller rental</li><li>Sod knife</li><li>Oscillating sprinkler</li><li>Starter fertilizer</li></ul></section>
+  <section class="prose"><h2>Common questions</h2><div><details><summary>How much sod is on a pallet?</summary><p>Usually 400 to 500 square feet, often around 450. It depends on the farm.</p></details><details><summary>How much extra sod should I order?</summary><p>5% for simple shapes, 10–15% for curved beds and many obstacles.</p></details><details><summary>How fast do I need to lay sod?</summary><p>Within a day of delivery in warm weather. Sod left rolled in the heat starts to yellow quickly.</p></details><details><summary>Do I need topsoil under sod?</summary><p>Sod roots best in 4–6 inches of loose topsoil. Use the topsoil calculator to size that layer.</p></details></div></section>
+  <section class='prose'><h2>Guides</h2><ul class='linklist'><li><a href="/when-and-how-to-lay-sod">When and how to lay sod</a></li></ul></section>
+  
+  <section class="group"><h2>Related calculators</h2><div class="cards"><a class="card" href="/topsoil-calculator"><span class="eyebrow">Topsoil Calculator</span><p>Soil for new lawns, raised beds and leveling.</p></a><a class="card" href="/grass-seed-calculator"><span class="eyebrow">Grass Seed Calculator</span><p>Pounds and bags of seed for a new lawn or overseeding.</p></a><a class="card" href="/fertilizer-calculator"><span class="eyebrow">Fertilizer Calculator</span><p>Pounds and bags of lawn fertilizer from the N-P-K.</p></a></div></section></div></main>
+<footer><div class="wrap"><span>© 2026 Yard Math. Estimates only; confirm with your supplier.</span>
+<span><a href="/about">About</a> · <a href="/methodology">Methodology</a> · <a href="/privacy">Privacy</a> · <a href="/contact">Contact</a></span></div></footer>
+<script src="/app.js" defer></script></body></html>
