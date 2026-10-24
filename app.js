@@ -91,6 +91,25 @@ R["deckstain"]=((v,h)=>{ const floor=v.len*v.wid; const rail=v.rail*v.railh*2; c
       if(v.price>0) rows.push(["Estimated cost","$"+h.f(gal*v.price,2)]);
       return {big:[h.f(gal,1),"gallons of stain"], rows:rows,
         note:"Coverage is for rough or weathered wood; smooth new boards take less, and a second coat often goes further than the first. When 4 or more extra gallons are needed, the can mix rounds up to another 5 gallon pail."}; });
+R["bagstoyards"]=((v,h)=>{ const ft3=v.bags*v.size, yd=ft3/27;
+      const rows=[["Cubic feet",h.f(ft3,1)],["Bags in one cubic yard",v.size>0?h.f(27/v.size,1):"0"]];
+      if(v.bag>0) rows.push(["Bagged cost","$"+h.f(v.bags*v.bag,2)]);
+      if(v.bulk>0) rows.push(["Bulk cost, same volume","$"+h.f(yd*v.bulk,2)]);
+      let note="A cubic yard is 27 cubic feet. Check the volume printed on the bag, since sizes vary by brand.";
+      if(v.bag>0&&v.bulk>0){ const d=v.bags*v.bag-yd*v.bulk;
+        note=d>0?"Bulk is about $"+h.f(d,0)+" cheaper before delivery fees.":"Bags are about $"+h.f(-d,0)+" cheaper and need no delivery."; }
+      return {big:[h.f(yd,2),"cubic yards"], rows:rows, note:note}; });
+R["yardstotons"]=((v,h)=>{ const d=[0,2800,2800,2200,1000,500][v.m]||0; const lbyd=v.custom>0?v.custom:d;
+      const lb=v.yd*lbyd, tons=lb/2000;
+      const rows=[["Pounds",h.c(lb)],["Metric tons",h.f(tons*0.907185,2)],["Density used",h.c(lbyd)+" lb per cu yd"],["Tons per cubic yard",h.f(lbyd/2000,2)]];
+      if(v.price>0) rows.push(["Estimated cost","$"+h.f(tons*v.price,2)]);
+      return {big:[h.f(tons,2),"US tons"], rows:rows, note:"Weights are approximate and rise when material is wet or compacted. Tons here are US short tons of 2,000 lb."}; });
+R["lime"]=((v,h)=>{ const prod=v.cce>0?v.req/(v.cce/100):0; const total=prod*v.area/1000;
+      const apps=prod>0?Math.ceil(prod/50):0; const bags=v.bag>0?Math.ceil(total/v.bag):0;
+      const rows=[["Lime per 1,000 sq ft",h.f(prod,1)+" lb"],["Applications (max 50 lb per 1,000 sq ft each)",String(apps)],
+        ["Per application",apps>0?h.f(prod/apps,1)+" lb per 1,000 sq ft":"0"],["Bags needed",String(bags)],["Area limed",h.c(v.area)+" sq ft"]];
+      if(v.price>0) rows.push(["Estimated cost","$"+h.f(bags*v.price,2)]);
+      return {big:[h.f(total,0),"pounds of lime"], rows:rows, note:"Follow your soil test and the product label first. Brand rates on bags can differ from this general calculation."}; });
 
 const h={f:(n,d)=>isFinite(n)?n.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d}):"0",
          c:n=>isFinite(n)&&n>0?Math.ceil(n-1e-9).toLocaleString("en-US"):"0"};

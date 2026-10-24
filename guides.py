@@ -736,4 +736,55 @@ body="""<h2>Quick answer</h2>
 related=["concrete-calculator", "gravel-calculator", "fence-post-concrete-calculator"],
 ),
 
+# 11 --------------------------------------------------------------------------
+dict(
+slug="how-to-lime-a-lawn-in-fall",
+group="Lawn & garden",
+title="How to Lime a Lawn in Fall: Rates, Timing, Steps",
+desc="Learn how to lime a lawn in fall: test the soil, pick a lime type, work out the rate from your soil test, and spread it so rain carries it to the roots.",
+h1="How to lime a lawn in fall",
+lede="Fall is a good time to lime because autumn rain moves the lime into the root zone. The steps are the same in every case: test the soil, work out the rate, spread it evenly and let the rain do the rest.",
+body="""<h2>Test the soil first</h2>
+<p>Lime raises soil pH, and you cannot see pH by looking at grass. A soil test tells you the current pH and how much lime the lawn needs. Ohio State University Extension puts the healthy range for home lawns at about pH 6.0 to 7.0, and the University of Connecticut says cool-season grasses prefer the mid 6s. Below that range, nutrients become harder for grass to use.</p>
+<p>Extension offices and many state labs run tests for a small fee. Take several small samples from across the lawn, mix them, and send them in. The report lists a lime requirement, usually as pounds of pure calcium carbonate per 1,000 square feet or per acre.</p>
+<p>Extension guidance discourages liming every year without testing, because too much lime makes soil too alkaline. If your pH is already in range, skip it.</p>
+
+<h2>Why fall works</h2>
+<p>Lime moves slowly through soil. Ohio State recommends spring or fall, when rainfall is most abundant, so water carries the lime down to the roots. Fall also avoids the stress of summer heat and gives the lime months to work before the next growing season. Lime can go on at other times of year too, but not onto wilted or frost-covered grass.</p>
+
+<h2>Choose a type of lime</h2>
+<p>Most lawns use ground limestone or pelletized limestone. Both have a calcium carbonate equivalent (CCE) of about 70 to 95, and both are slow acting. Pelletized lime is easier to spread and costs more. Dolomitic limestone works the same way and also supplies magnesium. Hydrated and burned lime act fast but are hazardous and hard to apply evenly, so they suit few home lawns. Gypsum is not a liming material because it barely changes pH.</p>
+
+<h2>Work out how much to buy</h2>
+<p>The soil test number assumes pure calcium carbonate. Divide it by the bag's CCE as a decimal to get the product you need.</p>
+<p>Product per 1,000 sq ft = soil test requirement / (CCE / 100)</p>
+<p>For a requirement of 50 lb and a 90% CCE product, that is 50 / 0.9, or about 56 lb per 1,000 square feet. Multiply by the lawn size in thousands of square feet and divide by the bag weight to get the number of bags. The <a href="/lime-calculator">lawn lime calculator</a> does all of this and rounds up the bags.</p>
+<table>
+<tr><th>Material</th><th>CCE</th><th>Max per application (lb per 1,000 sq ft)</th></tr>
+<tr><td>Ground or dolomitic limestone</td><td>70-95</td><td>50</td></tr>
+<tr><td>Pelletized limestone</td><td>70-95</td><td>50</td></tr>
+<tr><td>Hydrated lime</td><td>about 140</td><td>20</td></tr>
+<tr><td>Burned lime</td><td>about 180</td><td>10</td></tr>
+</table>
+<p>If the amount is above the maximum for one pass, Ohio State advises splitting it in half and applying the two portions at different times of year. A common pattern is part of the rate this fall and the rest next spring.</p>
+<p>Brand labels sometimes give lower rates than a soil test would. Espoma, for example, lists 12 lb per 1,000 square feet to raise pH on its 30 lb bag. Those products are formulated for that rate. Use the label's rate for that product, and use the soil test method above for generic limestone.</p>
+
+<h2>Spread it</h2>
+<ol>
+<li>Mow the lawn a little shorter than usual and remove leaves so the lime reaches the soil.</li>
+<li>Core aerating first helps lime work into the soil, according to Ohio State.</li>
+<li>Fill a broadcast or drop spreader and set it using the bag's chart. Pelletized lime usually flows well. Powdered lime can be dusty, so wear a mask and eye protection.</li>
+<li>Apply half the lime walking in one direction and the other half at a right angle, so streaks do not form.</li>
+<li>Sweep any lime off sidewalks and driveways.</li>
+<li>Water lightly to wash lime off the blades and onto the soil, unless rain is coming.</li>
+</ol>
+
+<h2>Can I lime and fertilize together?</h2>
+<p>UConn notes that fall is a good time for both lime and fertilizer. The two jobs use separate products and rates, so figure each one on its own. Use the <a href="/fertilizer-calculator">fertilizer calculator</a> for the nitrogen side. If you are also overseeding, the <a href="/grass-seed-calculator">grass seed calculator</a> gives the seed rate.</p>
+
+<h2>What to expect afterward</h2>
+<p>Lime works slowly. Soil pH may not reach its target for several months, and one application rarely finishes the job if the soil is very acidic. Test again before adding more. UConn suggests that once the pH reaches the mid 6s, maintenance is often about 50 lb per 1,000 square feet every other year, but a repeat soil test is a better guide than a calendar.</p>""",
+related=["lime-calculator", "fertilizer-calculator", "grass-seed-calculator"],
+),
+
 ]

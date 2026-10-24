@@ -30,7 +30,7 @@ def load(modname, attr):
     except ModuleNotFoundError:
         return []
 
-TOOLS = load("tools_core", "TOOLS") + load("tools_hardscape", "TOOLS") + load("tools_garden", "TOOLS")
+TOOLS = load("tools_core", "TOOLS") + load("tools_hardscape", "TOOLS") + load("tools_garden", "TOOLS") + load("tools_extra", "TOOLS")
 GUIDES = load("guides", "GUIDES")
 SLUGS = {t["slug"] for t in TOOLS}
 BY_SLUG = {t["slug"]: t for t in TOOLS}
